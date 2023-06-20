@@ -6,7 +6,7 @@ public class ObjectBehavior : MonoBehaviour
 {
     [SerializeField] GameObject prefab;
     int _missCount=0;
-    bool _gameOver=false;
+    // bool _gameOver=false;
 
     public void SpawnObject()
     {
@@ -23,7 +23,7 @@ public class ObjectBehavior : MonoBehaviour
         } else if( tag == "Ground") {
             if(_missCount == 5) {
                 Destroy(gameObject);
-                _gameOver = true;
+                // _gameOver = true;
             } else {
                 SpawnObject();
                 Destroy(gameObject);
